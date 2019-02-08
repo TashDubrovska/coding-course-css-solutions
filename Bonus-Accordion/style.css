@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 50px;
+  }
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+  color: red;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height ease-in .8s;
+}
+
+input[type=checkbox]:checked + .content {
+  max-height: 600px;
+  transition: max-height ease-in .8s;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.trigger {
+  border-top: 1px solid gray;
+  display: block;
+  padding: 16px;
+  position: relative;
+}
+
+.trigger:after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 10px;
+  background-image: url("https://i.imgur.com/snGPvDV.png");
+  background-size: 100%;
+  position: absolute;
+  right: 8px;
+  top: 16px;
+}
+  
